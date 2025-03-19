@@ -1,16 +1,21 @@
 ---
-title: Welcome
-description: Your first Starlight documentation page
+title: Welcome to the Underground
+description: Docs that resist surveillance and embrace elegance.
 ---
 
-# 👋 Welcome
+# 🕶️ Welcome, Console Cowboy
 
-You're running a Starlight documentation project. This is your first page.
+You've reached the documentation node of your resistance cell.
+This Starlight-powered site is built to be lean, fast, and fully in your control.
 
-> You can now start adding content to `docs/src/content/docs/`.
+> *"In a world of corporate interfaces, markdown is your katana."*
 
-### 📣 Callout Example
+## ⚡ Start Editing
 
-<Callout type="info" title="Pro tip">
-  You can build beautiful docs using reusable Astro components!
+Open `docs/src/content/docs/` and create `.md` files to document your system.
+
+### Example Callout
+
+<Callout type="warning" title="Low Signal">
+  Surveillance drones detected near perimeter. Encrypt everything.
 </Callout>

@@ -42,19 +42,9 @@ if [[ "$SET_REMOTE" == "y" ]]; then
 fi
 
 direnv allow
-
 cd docs
-
-# Run Starlight scaffold if not yet initialized
-if [ ! -f astro.config.mjs ]; then
-  echo "✨ Bootstrapping Starlight project..."
-  pnpm create starlight@latest . --yes
-fi
-
 pnpm install
-
 cd ..
-
 pnpm dlx lefthook install
 
-echo "✨ Done. You can now run 'just dev' to start the server."
+echo "✨ All set! Run 'just dev' and start creating."
