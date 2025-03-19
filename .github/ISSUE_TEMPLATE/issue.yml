@@ -1,0 +1,32 @@
+name: 📥 Bug Report / Feature Request
+description: File a bug or suggest an improvement
+labels: [needs triage]
+
+body:
+  - type: textarea
+    attributes:
+      label: What’s the issue or idea?
+      description: Describe the bug or feature request.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce (if applicable)
+      description: Tell us how to reproduce the bug.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Environment
+      description: OS, terminal, Node version, etc.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Additional Notes
+      description: Anything else you want to share.
+    validations:
+      required: false

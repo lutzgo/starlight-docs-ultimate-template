@@ -1,0 +1,21 @@
+---
+const { type = "info", title = "Note" } = Astro.props;
+---
+
+<div class="callout callout-{type}">
+  <strong>{title}</strong>
+  <slot />
+</div>
+
+<style>
+.callout {
+  padding: 1rem;
+  border-left: 4px solid;
+  background: rgba(0,0,0,0.03);
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+.callout-info { border-color: #1e90ff; }
+.callout-warning { border-color: #ffa500; background: rgba(255,165,0,0.1); }
+.callout-error { border-color: #ff4d4f; background: rgba(255,77,79,0.1); }
+</style>

@@ -1,0 +1,6 @@
+pre-commit:
+  commands:
+    prettier:
+      run: pnpm prettier --check .
+    markdownlint:
+      run: pnpm dlx markdownlint-cli2 '**/*.md'

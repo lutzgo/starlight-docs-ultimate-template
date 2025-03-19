@@ -1,0 +1,36 @@
+name: Build & Lint Docs
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        working-directory: ./docs
+        run: pnpm install
+
+      - name: Build docs
+        working-directory: ./docs
+        run: pnpm build
+
+      - name: Lint Markdown
+        run: pnpm dlx markdownlint-cli2 '**/*.md'
+
+      - name: Prettier Check
+        run: pnpm prettier --check .
