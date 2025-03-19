@@ -1,21 +1,33 @@
 ---
-title: Welcome to the Underground
-description: Docs that resist surveillance and embrace elegance.
+title: Welcome to the Resistance Node
+description: Underground documentation system.
 ---
 
-# 🕶️ Welcome, Console Cowboy
+# 🕶️ Welcome, Operative
 
-You've reached the documentation node of your resistance cell.
-This Starlight-powered site is built to be lean, fast, and fully in your control.
+This node serves as a documentation terminal for all resistance cells.
 
-> *"In a world of corporate interfaces, markdown is your katana."*
+> *"When the corpos own the networks, we build our own protocols."*
 
-## ⚡ Start Editing
+## 📁 Navigation
+- Create new `.md` files in `docs/src/content/docs/`
+- Link them together with internal references
+- Use the embedded components to tell your story
 
-Open `docs/src/content/docs/` and create `.md` files to document your system.
+### ⚠ Example Log
 
-### Example Callout
+<SystemLog>
+  [BOOT] Uplink established from sector-7.
+  [INFO] 3 unauthorized scans deflected.
+  [WARN] Network noise suggests ICE deployment.
+</SystemLog>
 
-<Callout type="warning" title="Low Signal">
-  Surveillance drones detected near perimeter. Encrypt everything.
-</Callout>
+<DataLeak>
+  Sector Archive decrypted. Data payload contains blueprints of the orbital relay node.
+</DataLeak>
+
+<EncryptedNote title="Ciphered Briefing">
+  Contact: R0SEΔQUARTZ  
+  Signal: 141.88.220  
+  Phrase: "Static blooms in code"
+</EncryptedNote>

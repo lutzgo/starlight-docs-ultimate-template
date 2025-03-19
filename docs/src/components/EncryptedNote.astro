@@ -1,0 +1,20 @@
+---
+const { title = "Encrypted Note" } = Astro.props;
+---
+
+<div class="encrypted-note">
+  <h4>{title}</h4>
+  <slot />
+</div>
+
+<style>
+.encrypted-note {
+  background: #1a1a2e;
+  color: #d4d4ff;
+  padding: 1rem;
+  border-left: 5px solid #4b0082;
+  font-family: monospace;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+</style>
