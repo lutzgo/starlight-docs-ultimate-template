@@ -9,6 +9,8 @@
     "lint:md": "markdownlint-cli2 '**/*.md'"
   },
   "devDependencies": {
+    "@astrojs/starlight": "^0.15.3",
+    "astro": "^4.0.0",
     "prettier": "^3.2.4",
     "markdownlint-cli2": "^0.8.0"
   }

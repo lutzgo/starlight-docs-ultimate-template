@@ -4,14 +4,11 @@ set -e
 echo "🧙 Welcome to the Starlight Docs Template Bootstrap Wizard!"
 echo "──────────────────────────────────────────────────────────"
 
-# Project name prompt
 read -p "📦 Enter your project name: " PROJECT_NAME
 [ -z "$PROJECT_NAME" ] && PROJECT_NAME="starlight-docs"
 
-# Plausible toggle
 read -p "📈 Enable Plausible Analytics? (y/n): " ENABLE_PLAUSIBLE
 
-# License prompt
 echo "📜 Choose a license:"
 echo "  1) MIT"
 echo "  2) Apache-2.0"
@@ -36,7 +33,6 @@ case $LICENSE_CHOICE in
     ;;
 esac
 
-# Git setup
 read -p "🔗 Do you want to set a git remote now? (y/n): " SET_REMOTE
 if [[ "$SET_REMOTE" == "y" ]]; then
   read -p "   Enter remote URL: " GIT_REMOTE
@@ -45,13 +41,17 @@ if [[ "$SET_REMOTE" == "y" ]]; then
   echo "✅ Git remote set."
 fi
 
-# direnv
 direnv allow
 
-# pnpm install
-cd docs && pnpm install && cd ..
+cd docs
+if ! grep -q '"astro"' package.json; then
+  echo "🌠 Adding missing Astro & Starlight dependencies..."
+  pnpm add -D astro @astrojs/starlight
+fi
 
-# Setup Lefthook
+pnpm install
+cd ..
+
 pnpm dlx lefthook install
 
 echo "✨ Done. You can now run 'just dev' to start the server."
