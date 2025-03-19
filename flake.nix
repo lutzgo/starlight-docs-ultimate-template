@@ -23,6 +23,7 @@
           git
           nodePackages.prettier
           nodePackages.typescript
+          pnpm
           python3
           nodePackages.node-gyp
         ];
