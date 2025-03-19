@@ -1,11 +1,13 @@
 ---
 title: Welcome to the Resistance Node
 description: Underground documentation system.
+sidebar:
+  hidden: false
 ---
 
 # 🕶️ Welcome, Operative
 
-This node serves as a documentation terminal for all resistance cells.
+You've reached the documentation node of the underground resistance.
 
 > *"When the corpos own the networks, we build our own protocols."*
 

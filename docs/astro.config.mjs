@@ -6,6 +6,10 @@ export default defineConfig({
     starlight({
       title: 'Resistance Node Docs',
       description: 'A documentation node for resistance operatives.',
+      social: {
+        twitter: 'https://twitter.com/resistance_docs',
+        github: 'https://github.com/yourusername/starlight-docs-template'
+      }
     })
   ]
 });
