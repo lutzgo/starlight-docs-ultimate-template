@@ -48,7 +48,7 @@ cd docs
 # Run Starlight scaffold if not yet initialized
 if [ ! -f astro.config.mjs ]; then
   echo "✨ Bootstrapping Starlight project..."
-  pnpm create starlight/markdoc . --yes
+  pnpm create starlight@latest . --yes
 fi
 
 pnpm install
