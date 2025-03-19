@@ -41,6 +41,42 @@ if [[ "$SET_REMOTE" == "y" ]]; then
   echo "✅ Git remote set."
 fi
 
+echo "📂 Ensuring Starlight content structure exists..."
+mkdir -p docs/src/content/docs/
+
+if [ ! -f docs/src/content/docs/index.md ]; then
+  echo "📄 Creating starter index.md"
+  cat > docs/src/content/docs/index.md <<EOF
+---
+title: Welcome
+description: Your first Starlight documentation page
+---
+
+# 👋 Welcome
+
+You're running a Starlight documentation project. This is your first page.
+
+> You can now start adding content to \`docs/src/content/docs/\`.
+
+### 📣 Callout Example
+
+<Callout type="info" title="Pro tip">
+  You can build beautiful docs using reusable Astro components!
+</Callout>
+EOF
+fi
+
+if [ ! -f docs/src/content/config.ts ]; then
+  echo "⚙ Creating content collection config.ts"
+  cat > docs/src/content/config.ts <<EOF
+import { defineCollection } from 'astro:content';
+
+export const collections = {
+  docs: defineCollection({ type: 'content' }),
+};
+EOF
+fi
+
 direnv allow
 
 cd docs
