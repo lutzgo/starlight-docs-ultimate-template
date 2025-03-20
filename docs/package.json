@@ -4,14 +4,10 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "fmt": "prettier --write .",
-    "lint:md": "markdownlint-cli2 '**/*.md'"
+    "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/starlight": "^0.15.3",
-    "astro": "^4.0.0",
-    "prettier": "^3.2.4",
-    "markdownlint-cli2": "^0.8.0"
+    "@astrojs/starlight": "^0.15.4",
+    "astro": "^4.0.0"
   }
 }
